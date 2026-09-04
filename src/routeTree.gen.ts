@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AreasRouteImport } from './routes/areas'
+import { Route as ComunidadAppRouteImport } from './routes/comunidad-app'
+import { Route as ConsultoriaItRouteImport } from './routes/consultoria-it'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as DesarrolloSoftwareRouteImport } from './routes/desarrollo-software'
+import { Route as EncuestasMercadoRouteImport } from './routes/encuestas-mercado'
+import { Route as MedicionesConsumoRouteImport } from './routes/mediciones-consumo'
+import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
+import { Route as RatingAppRouteImport } from './routes/rating-app'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AreasRoute = AreasRouteImport.update({
+  id: '/areas',
+  path: '/areas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComunidadAppRoute = ComunidadAppRouteImport.update({
+  id: '/comunidad-app',
+  path: '/comunidad-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultoriaItRoute = ConsultoriaItRouteImport.update({
+  id: '/consultoria-it',
+  path: '/consultoria-it',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesarrolloSoftwareRoute = DesarrolloSoftwareRouteImport.update({
+  id: '/desarrollo-software',
+  path: '/desarrollo-software',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EncuestasMercadoRoute = EncuestasMercadoRouteImport.update({
+  id: '/encuestas-mercado',
+  path: '/encuestas-mercado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MedicionesConsumoRoute = MedicionesConsumoRouteImport.update({
+  id: '/mediciones-consumo',
+  path: '/mediciones-consumo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuienesSomosRoute = QuienesSomosRouteImport.update({
+  id: '/quienes-somos',
+  path: '/quienes-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RatingAppRoute = RatingAppRouteImport.update({
+  id: '/rating-app',
+  path: '/rating-app',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/areas': typeof AreasRoute
+  '/comunidad-app': typeof ComunidadAppRoute
+  '/consultoria-it': typeof ConsultoriaItRoute
+  '/contacto': typeof ContactoRoute
+  '/desarrollo-software': typeof DesarrolloSoftwareRoute
+  '/encuestas-mercado': typeof EncuestasMercadoRoute
+  '/mediciones-consumo': typeof MedicionesConsumoRoute
+  '/quienes-somos': typeof QuienesSomosRoute
+  '/rating-app': typeof RatingAppRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/areas': typeof AreasRoute
+  '/comunidad-app': typeof ComunidadAppRoute
+  '/consultoria-it': typeof ConsultoriaItRoute
+  '/contacto': typeof ContactoRoute
+  '/desarrollo-software': typeof DesarrolloSoftwareRoute
+  '/encuestas-mercado': typeof EncuestasMercadoRoute
+  '/mediciones-consumo': typeof MedicionesConsumoRoute
+  '/quienes-somos': typeof QuienesSomosRoute
+  '/rating-app': typeof RatingAppRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/areas': typeof AreasRoute
+  '/comunidad-app': typeof ComunidadAppRoute
+  '/consultoria-it': typeof ConsultoriaItRoute
+  '/contacto': typeof ContactoRoute
+  '/desarrollo-software': typeof DesarrolloSoftwareRoute
+  '/encuestas-mercado': typeof EncuestasMercadoRoute
+  '/mediciones-consumo': typeof MedicionesConsumoRoute
+  '/quienes-somos': typeof QuienesSomosRoute
+  '/rating-app': typeof RatingAppRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/areas'
+    | '/comunidad-app'
+    | '/consultoria-it'
+    | '/contacto'
+    | '/desarrollo-software'
+    | '/encuestas-mercado'
+    | '/mediciones-consumo'
+    | '/quienes-somos'
+    | '/rating-app'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/areas'
+    | '/comunidad-app'
+    | '/consultoria-it'
+    | '/contacto'
+    | '/desarrollo-software'
+    | '/encuestas-mercado'
+    | '/mediciones-consumo'
+    | '/quienes-somos'
+    | '/rating-app'
+  id:
+    | '__root__'
+    | '/'
+    | '/areas'
+    | '/comunidad-app'
+    | '/consultoria-it'
+    | '/contacto'
+    | '/desarrollo-software'
+    | '/encuestas-mercado'
+    | '/mediciones-consumo'
+    | '/quienes-somos'
+    | '/rating-app'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AreasRoute: typeof AreasRoute
+  ComunidadAppRoute: typeof ComunidadAppRoute
+  ConsultoriaItRoute: typeof ConsultoriaItRoute
+  ContactoRoute: typeof ContactoRoute
+  DesarrolloSoftwareRoute: typeof DesarrolloSoftwareRoute
+  EncuestasMercadoRoute: typeof EncuestasMercadoRoute
+  MedicionesConsumoRoute: typeof MedicionesConsumoRoute
+  QuienesSomosRoute: typeof QuienesSomosRoute
+  RatingAppRoute: typeof RatingAppRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/areas': {
+      id: '/areas'
+      path: '/areas'
+      fullPath: '/areas'
+      preLoaderRoute: typeof AreasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comunidad-app': {
+      id: '/comunidad-app'
+      path: '/comunidad-app'
+      fullPath: '/comunidad-app'
+      preLoaderRoute: typeof ComunidadAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultoria-it': {
+      id: '/consultoria-it'
+      path: '/consultoria-it'
+      fullPath: '/consultoria-it'
+      preLoaderRoute: typeof ConsultoriaItRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/desarrollo-software': {
+      id: '/desarrollo-software'
+      path: '/desarrollo-software'
+      fullPath: '/desarrollo-software'
+      preLoaderRoute: typeof DesarrolloSoftwareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/encuestas-mercado': {
+      id: '/encuestas-mercado'
+      path: '/encuestas-mercado'
+      fullPath: '/encuestas-mercado'
+      preLoaderRoute: typeof EncuestasMercadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mediciones-consumo': {
+      id: '/mediciones-consumo'
+      path: '/mediciones-consumo'
+      fullPath: '/mediciones-consumo'
+      preLoaderRoute: typeof MedicionesConsumoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quienes-somos': {
+      id: '/quienes-somos'
+      path: '/quienes-somos'
+      fullPath: '/quienes-somos'
+      preLoaderRoute: typeof QuienesSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rating-app': {
+      id: '/rating-app'
+      path: '/rating-app'
+      fullPath: '/rating-app'
+      preLoaderRoute: typeof RatingAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AreasRoute: AreasRoute,
+  ComunidadAppRoute: ComunidadAppRoute,
+  ConsultoriaItRoute: ConsultoriaItRoute,
+  ContactoRoute: ContactoRoute,
+  DesarrolloSoftwareRoute: DesarrolloSoftwareRoute,
+  EncuestasMercadoRoute: EncuestasMercadoRoute,
+  MedicionesConsumoRoute: MedicionesConsumoRoute,
+  QuienesSomosRoute: QuienesSomosRoute,
+  RatingAppRoute: RatingAppRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
