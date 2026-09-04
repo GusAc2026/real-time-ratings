@@ -116,8 +116,8 @@ function Page() {
               onChange={(e) => setValues((v) => ({ ...v, mensaje: e.target.value }))}
               className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/30"
             />
-            {errors.mensaje && (
-              <span className="mt-1 block text-xs text-destructive">{errors.mensaje}</span>
+            {errors["mensaje"] && (
+              <span className="mt-1 block text-xs text-destructive">{errors["mensaje"]}</span>
             )}
           </label>
 
